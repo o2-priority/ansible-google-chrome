@@ -1,0 +1,22 @@
+---
+
+- name: Add google-chrome gpg signing key
+  apt_key:
+    url:   "{{ google_chrome_signing_key_url }}"
+    state: present
+
+- name: Add google-chrome apt repo to sources list
+  template: 
+    src:  google-chrome.list.j2
+    dest: /etc/apt/sources.list.d/google-chrome.list
+    mode: 0644
+  register: repo
+
+- name: Update apt repo cache for google-chrome
+  apt:  update_cache=yes
+  when: repo|changed
+
+- name: Install google-chrome
+  apt: 
+    name:  google-chrome-stable
+    state: present

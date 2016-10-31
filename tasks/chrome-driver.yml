@@ -1,0 +1,27 @@
+---
+
+- name: Install unzip | Debian
+  apt: name=unzip state=present
+  when: ansible_os_family|lower == 'debian'
+
+- name: Install unzip | Redhat
+  yum: name=unzip state=present
+  when: ansible_os_family|lower == 'redhat'
+
+- name: Download google-chrome driver archive
+  get_url: 
+    url:  "{{ google_chrome_driver_url }}"
+    dest: /tmp/chromedriver_linux64.zip
+
+- name: Decompress google-chrome driver archive
+  unarchive:
+    src:  /tmp/chromedriver_linux64.zip
+    dest: /usr/local/share/
+    mode: 0755
+    copy: no
+
+- name: Install google-chrome driver
+  file:
+    src:   /usr/local/share/chromedriver
+    dest:  /usr/bin/chromedriver
+    state: link

@@ -1,0 +1,9 @@
+---
+
+google_chrome_signing_key_url: "https://dl-ssl.google.com/linux/linux_signing_key.pub"
+google_chrome_apt_repo:        "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
+google_chrome_yum_repo_url:    "http://dl.google.com/linux/rpm/stable/x86_64"
+
+google_chrome_driver_install: true
+google_chrome_driver_version: 2.21
+google_chrome_driver_url:  "http://chromedriver.storage.googleapis.com/{{ google_chrome_driver_version }}/chromedriver_linux64.zip"

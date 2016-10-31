@@ -1,0 +1,8 @@
+---
+
+- name: Google Chrome Install
+  include: "install-{{ ansible_os_family|lower }}.yml"
+
+- name: Google Chrome Driver Install
+  include: chrome-driver.yml
+  when: google_chrome_driver_install

@@ -1,0 +1,14 @@
+---
+
+- name: Add google-chrome yum repository
+  template:
+    src:   google-chrome.yum.repo.j2
+    dest:  /etc/yum.repos.d/google-chrome.repo
+    owner: root
+    group: root
+    mode:  0644
+
+- name: Install google-chrome
+  yum:
+    name:  google-chrome-stable
+    state: present
