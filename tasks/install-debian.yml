@@ -18,5 +18,5 @@
 
 - name: Install google-chrome
   apt: 
-    name:  google-chrome-stable
+    name:  "google-chrome-stable={{ google_chrome_version|default('*') }}"
     state: present
