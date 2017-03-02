@@ -11,11 +11,11 @@
 - name: Download google-chrome driver archive
   get_url: 
     url:  "{{ google_chrome_driver_url }}"
-    dest: /tmp/chromedriver_linux64.zip
+    dest: "/tmp/chromedriver_linux64-{{ google_chrome_driver_version }}.zip"
 
 - name: Decompress google-chrome driver archive
   unarchive:
-    src:  /tmp/chromedriver_linux64.zip
+    src:  "/tmp/chromedriver_linux64-{{ google_chrome_driver_version }}.zip"
     dest: /usr/local/share/
     mode: 0755
     copy: no
