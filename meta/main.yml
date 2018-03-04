@@ -12,9 +12,10 @@ galaxy_info:
       versions:
         - precise
         - trusty
+        - xenial
   galaxy_tags:
     - google-chrome
     - google-chrome driver
     - web browser
 dependencies: []
-  
+
