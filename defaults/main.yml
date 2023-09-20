@@ -6,5 +6,6 @@ google_chrome_apt_repo:        "deb [arch=amd64] http://dl.google.com/linux/chro
 google_chrome_yum_repo_url:    "http://dl.google.com/linux/rpm/stable/x86_64"
 
 google_chrome_driver_install: true
-google_chrome_driver_version: 2.31
-google_chrome_driver_url:  "http://chromedriver.storage.googleapis.com/{{ google_chrome_driver_version }}/chromedriver_linux64.zip"
+google_chrome_driver_version: 116.0.5845.96
+#google_chrome_driver_url:  "http://chromedriver.storage.googleapis.com/{{ google_chrome_driver_version }}/chromedriver_linux64.zip"
+google_chrome_driver_url: "https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/{{ google_chrome_driver_version }}/linux64/chromedriver-linux64.zip"
