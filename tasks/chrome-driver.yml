@@ -16,7 +16,7 @@
 - name: Decompress google-chrome driver archive
   unarchive:
     src:  "/tmp/chromedriver_linux64-{{ google_chrome_driver_version }}.zip"
-    dest: /usr/local/share/chromedriver-linux64
+    dest: /usr/local/share/
     mode: 0755
     copy: no
 
