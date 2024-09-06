@@ -22,6 +22,6 @@
 
 - name: Install google-chrome driver
   file:
-    src:   /usr/local/share/chromedriver-linux64/chromedriver
+    src:   /usr/local/share/chromedriver
     dest:  /usr/bin/chromedriver
     state: link
